@@ -5,5 +5,31 @@
   "paginate": {
     "default": 10,
     "max": 50
+  },
+  "mongodb": "mongodb://localhost:27017/eva_api",
+  "authentication": {
+    "secret": "662c383f863e04b66617351d857d5a43f864eb11f95a6ef8281b74006a0230b4aec136e5cfe376d24157fdd832a8c3abbba628253e7cdab72c494675dbfe6a137ea60f5a85201188c632a2fa2a4a38c6d22434c4293ead1ac40da3ca1b7b9a6873ec30e38cd1556946d4c8c8d767ffc38e4bf957f59b82c1da9f8b61554433f631a0466c5273bb97e729fd19b2c35423d67d273de6fb83d44f02095a7daa2b3b77b28e6dd9b7a8aa7ded9125ffd3d7a4985b61663d7e496f03907d4214c7935749f31b22528f1ceedaff765de3a0d7574a0de1e13cac3a220928db56577798043235608f809209d698d74d8830d4f3cd7a96be21b13180fa2fe9fb26f73870be",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
   }
 }
