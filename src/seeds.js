@@ -18,7 +18,7 @@ const students = [
       "http://www.colorado.edu/ocg/sites/default/files/styles/small/public/people/person-placeholder_43.jpg?itok=u6SIZO7Y",
     grades: [2,1],
     batch: {
-      number: 8,
+      number: 7,
       startDate: 2017-05-15,
       endDate: 2017-07-12,
     }
