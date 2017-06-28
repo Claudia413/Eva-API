@@ -11,6 +11,7 @@ module.exports = function (app) {
     name: { type: String, required: true },
     picture: { type: String, required: true },
     grades: { type: Array },
+    batch: { type: Number},
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });

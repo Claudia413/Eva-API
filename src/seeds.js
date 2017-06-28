@@ -7,7 +7,7 @@ const auth = require('feathers-authentication-client');
 const user =
   {
     name: "Wouter",
-    email: "wouter@gcodaisseur.com",
+    email: "wouter@codaisseur.com",
     password: "abc123"
   }
 
@@ -153,14 +153,6 @@ feathersClient.service('users').create(user)
         });
     })
   })
-  // .then(() => {
-  //     feathersClient.service('students').create(batch)
-  //       .then((result) => {
-  //         console.log('batch seeded..', result.title);
-  //       }).catch((error) => {
-  //         console.error('Error seeding batch', error.message);
-  //       });
-  // })
   .catch(function(error){
     console.error('Error authenticating!', error);
   });
