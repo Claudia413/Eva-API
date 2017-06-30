@@ -5,12 +5,14 @@ const restrict = [
   authenticate('jwt'),
 ];
 
+const addStudent = require('../../hooks/add-student');
+
 module.exports = {
   before: {
-    all: [ ...restrict ],
+    all: [],
     find: [],
     get: [],
-    create: [],
+    create: [addStudent()],
     update: [],
     patch: [],
     remove: []
