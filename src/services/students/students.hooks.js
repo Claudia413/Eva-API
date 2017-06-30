@@ -3,15 +3,16 @@ const { restrictToAuthenticated } = require('feathers-authentication-hooks');
 
 const restrict = [
   authenticate('jwt'),
-  restrictToAuthenticated(),
 ];
+
+const addStudent = require('../../hooks/add-student');
 
 module.exports = {
   before: {
-    all: [ ...restrict ],
+    all: [],
     find: [],
     get: [],
-    create: [],
+    create: [addStudent()],
     update: [],
     patch: [],
     remove: []
